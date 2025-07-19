@@ -1,0 +1,12 @@
+- name: Install RKE2 Cluster using lablabs.rke2
+  hosts: all
+  become: yes
+  roles:
+    - role: lablabs.rke2
+  vars:
+    rke2_token: "SuperSecureSharedTokenHere"
+    rke2_version: "v1.25.3+rke2r1"
+    rke2_ha_mode: false
+    rke2_download_kubeconf: true
+    rke2_download_kubeconf_path: /tmp
+    rke2_download_kubeconf_file_name: rke2.yaml
