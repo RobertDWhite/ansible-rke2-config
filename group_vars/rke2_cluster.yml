@@ -1,0 +1,13 @@
+rke2_type: server
+rke2_control_node: true
+rke2_server_url: ""  # leave blank for initial server
+rke2_token: "SuperSecurePW2"
+
+rke2_config:
+  tls-san:
+    - "10.100.1.55"
+  node-name: "node1"
+k8s_cluster:
+  control_plane:
+    hosts:
+      - node1
